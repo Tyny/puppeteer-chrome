@@ -1,0 +1,14 @@
+org: mrtnslv
+app: nodejs-serveless-pdf-test
+service: puppeteer-chrome
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
